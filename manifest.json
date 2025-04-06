@@ -1,0 +1,15 @@
+{
+  "name": "Custom Card Display",
+  "description": "Displays a single value from your data source in a styled card.",
+  "author": "Your Name",
+  "organization": "Your Org",
+  "version": "1",
+  "components": [
+    {
+      "id": "custom_card",
+      "file": "index.html"
+    }
+  ],
+  "icon": "text_fields",
+  "devMode": true
+}
