@@ -1,0 +1,13 @@
+{
+  "name": "Custom Date Card",
+  "description": "Displays dynamic month range",
+  "components": {
+    "viz": {
+      "url": "https://yourdomain.com/viz.js"
+    }
+  },
+  "style": {
+    "url": "https://yourdomain.com/style.css"
+  },
+  "logoUrl": "https://yourdomain.com/logo.png"
+}
