@@ -1,0 +1,62 @@
+/* index.html */
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Custom Card</title>
+    <script>
+      // Load data and render the custom card
+      function drawViz(data) {
+        const container = document.getElementById("container");
+        container.innerHTML = ""; // Clear previous content
+
+        if (!data || !data.tables || !data.tables.DEFAULT) {
+          container.textContent = "No data";
+          return;
+        }
+
+        const table = data.tables.DEFAULT;
+        const firstRow = table.rows[0];
+        if (!firstRow) {
+          container.textContent = "No rows";
+          return;
+        }
+
+        const value = firstRow[0];
+        const card = document.createElement("div");
+        card.className = "custom-card";
+        card.textContent = value;
+        container.appendChild(card);
+      }
+
+      // Subscribe to Looker Studio events
+      looker.plugins.visualizations.add({
+        create: function (element, config) {
+          const container = document.createElement("div");
+          container.id = "container";
+          element.appendChild(container);
+        },
+        updateAsync: function (data, element, config, queryResponse, details, done) {
+          drawViz(data);
+          done();
+        },
+      });
+    </script>
+    <style>
+      .custom-card {
+        font-size: 24px;
+        color: #2a9d8f;
+        font-weight: bold;
+        padding: 12px 24px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        text-align: center;
+        background: #f4f4f4;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
