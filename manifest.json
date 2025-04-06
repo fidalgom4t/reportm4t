@@ -1,15 +1,14 @@
 {
-  "name": "Custom Card Display",
-  "description": "Displays a single value from your data source in a styled card.",
-  "author": "Your Name",
-  "organization": "Your Org",
-  "version": "1",
-  "components": [
-    {
-      "id": "custom_card",
-      "file": "index.html"
+  "name": "Text Card Display",
+  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+  "organization": "Mind4Time",
+  "organizationUrl": "https://mind4time.com",
+  "supportUrl": "https://mind4time.com/contact",
+  "description": "A custom community visualization to show dynamic text (e.g., date range, labels, etc.).",
+  "devMode": true,
+  "components": {
+    "display": {
+      "url": "index.html"
     }
-  ],
-  "icon": "text_fields",
-  "devMode": true
+  }
 }
