@@ -10,8 +10,8 @@
   },
   "components": {
     "report": {
-      "script": "index.js",
-      "style": "style.css"
+      "script": "https://fidalgom4t.github.io/reportm4t/index.js",
+      "style": "https://fidalgom4t.github.io/reportm4t/style.css"
     }
   }
 }
