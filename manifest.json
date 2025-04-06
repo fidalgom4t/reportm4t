@@ -1,14 +1,23 @@
 {
-  "name": "Text Card Display",
-  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+  "name": "Custom Card",
+  "description": "A styled card visualization",
+  "author": "Gonçalo Fidalgo",
   "organization": "Mind4Time",
-  "organizationUrl": "https://mind4time.com",
-  "supportUrl": "https://mind4time.com/contact",
-  "description": "A custom community visualization to show dynamic text (e.g., date range, labels, etc.).",
-  "devMode": true,
-  "components": {
-    "display": {
-      "url": "index.html"
+  "url": "https://fidalgom4t.github.io/reportm4t/",
+  "script": "main.js",
+  "style": "style.css",
+  "icon": "icon.png",
+  "theme": {
+    "light": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
     }
-  }
+  },
+  "components": [
+    {
+      "id": "card",
+      "label": "Card",
+      "type": "community_visualization"
+    }
+  ]
 }
