@@ -1,13 +1,57 @@
+/*
+This is the complete file set you need for a custom community visualization card in Looker Studio.
+It displays a dynamic string like "abril - maio de 2025" based on a custom field (or blended data).
+*/
+
+// 1. manifest.json
 {
-  "name": "Custom Date Card",
-  "description": "Displays dynamic month range",
-  "components": {
-    "viz": {
-      "url": "https://yourdomain.com/viz.js"
-    }
+  "visualization": {
+    "id": "custom-date-label",
+    "label": "Custom Date Label",
+    "description": "Displays a formatted date range label.",
+    "icon": "text_fields",
+    "supportConfig": false
+  },
+  "data": {
+    "schemas": [
+      {
+        "name": "default",
+        "requiredFields": [
+          {
+            "name": "label",
+            "type": "TEXT"
+          }
+        ]
+      }
+    ]
   },
   "style": {
-    "url": "https://yourdomain.com/style.css"
-  },
-  "logoUrl": "https://yourdomain.com/logo.png"
+    "default": {
+      "backgroundColor": {
+        "label": "Background color",
+        "type": "COLOR",
+        "defaultValue": "#FFFFFF"
+      },
+      "textColor": {
+        "label": "Text color",
+        "type": "COLOR",
+        "defaultValue": "#000000"
+      },
+      "fontSize": {
+        "label": "Font size",
+        "type": "NUMBER",
+        "defaultValue": 24
+      },
+      "fontWeight": {
+        "label": "Font weight",
+        "type": "TEXT",
+        "defaultValue": "bold"
+      },
+      "textAlign": {
+        "label": "Text align",
+        "type": "TEXT",
+        "defaultValue": "center"
+      }
+    }
+  }
 }
